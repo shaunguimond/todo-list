@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+:root {
+    --background-2: rgba(0, 0, 0, 0.5);
+    --background-1: #242a3e;
+    --text_main: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todolist-container {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    min-width: 300px;
+    width: fit-content;
+    max-width: 100%;
+    z-index: 20;   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-2);
+    color: var(--text_main);
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 60px;;
+    filter: drop-shadow(var(--background-2) 0.25rem 0.25rem 1rem);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todolist-container h1 {
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 12px;
+    padding-top: 40px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.todolist-container li {
+    margin-top: 0px;
+    font-size: large;
+    padding:  0px 40px;
+    margin-bottom: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todolist-container li label {
+    width: 100%;
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.todolist-container li label:hover {
+    cursor: pointer;
+}
+
+.todolist-container form {
+    width: 100%;
+    display: flex;
+}
+
+.todolist-container form input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: large;
+    padding: 0%;
+    border-radius: 0px 0px 0px 8px;
+    background-color: var(--background-1);
+    color:var(--text_main);
+}
+
+.todolist-container form input::placeholder {
+    color:var(--text_main);
+    opacity: 0.5;
+    padding-left: 8px;
+}
+
+.todolist-container form button {
+    width: 50%;
+    font-size: large;
+    border: none;
+    height: 40px;
+    border-radius: 0px 0px 8px 0px;
+    background-color: var(--background-1);
+    color:var(--text_main);
+    border-left: var(--background-2) 2px solid;
 }
